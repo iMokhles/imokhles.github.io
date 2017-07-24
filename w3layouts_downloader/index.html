@@ -4,8 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      W3layouts Downloader
+    </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
+    	body{
+    		height:100%;
+		   	width:100%;
+		   	background-image:url(https://i.stack.imgur.com/9WYxT.png);/*your background image*/  
+		   	background-repeat:no-repeat;/*we want to have one single image not a repeated one*/  
+		   	background-size:cover;/*this sets the image to fullscreen covering the whole screen*/  
+		   	/*css hack for ie*/     
+		   	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.image.jpg',sizingMethod='scale');
+		   	-ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image.jpg',sizingMethod='scale')";
+		}
     	.cf:before, .cf:after{
 		    content:"";
 		    display:table;
@@ -119,7 +132,10 @@
 		}
     </style>
 </head>
-<body background="https://i.stack.imgur.com/9WYxT.png">
+<body>
+	<center>
+		<h2>W3layouts Downloader</h2>
+	</center>
 	<form class="form-wrapper cf">
         <input type="text" placeholder="Search here..." required>
         <button type="submit">Search</button>
