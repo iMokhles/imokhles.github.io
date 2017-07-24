@@ -12,7 +12,7 @@
     <style type="text/css">
     	body{
     		height:500%;
-		   	width:500%;
+		   	width:100%;
 		   	background-image:url(http://cdn.pcwallart.com/images/dark-blue-gradient-wallpaper-2.jpg);/*your background image*/  
 		   	/*background-repeat:no-repeat;we want to have one single image not a repeated one  */
 		   	/*background-size:cover;this sets the image to fullscreen covering the whole screen  */
@@ -146,6 +146,9 @@
 	    	// get field url
 	    	var download_link = document.getElementById("download_link").value;
 	    	// load page code and get item id
+	    	$.get(download_link, function(response) { 
+			    alert(response) 
+			});
 
 	    }
 	</script>
