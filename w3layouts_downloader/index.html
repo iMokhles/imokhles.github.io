@@ -156,7 +156,7 @@
 			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			    {
 			    	var str = xmlhttp.responseText;    
-					var itemId = str.split('/download-template/?l=').pop().split('&t=pack\"').shift(); // returns 'id'
+					var itemId = str.split('/download-template/?l=').pop().split('&t=pack').shift(); // returns 'id'
 					location.href = "http://d.w3layouts.com/downloadfree/"+itemId;
 			    	console.log("Item Id: "+itemId);
 			    }
