@@ -138,10 +138,6 @@
 </head>
 <body>
 	<script type="text/javascript">
-		window.onload = function() {
-	        // Event bindings.
-	        document.getElementById('download_form').addEventListener('submit', startDownload);
-	    };
 	    function startDownload() {
 	    	// get field url
 	    	var download_link = document.getElementById("download_link").value;
@@ -168,13 +164,13 @@
 
 	    }
 	</script>
-	<form class="form-wrapper cf" id="download_form">
+	<form class="form-wrapper cf">
 		<center>
 			<h2 class="title_style">W3layouts Downloader</h2>
 		</center>
 		<br>
         <input type="text" id="download_link" placeholder="Link here..." required>
-        <button type="submit"><i class="fa fa-arrow-circle-down" style="color: #ffffff; font-size: 15px;"></i> Download</button>
+        <button onclick="startDownload();" type="button"><i class="fa fa-arrow-circle-down" style="color: #ffffff; font-size: 15px;"></i> Download</button>
     </form> 
     <br>
         <center>
