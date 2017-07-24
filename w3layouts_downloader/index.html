@@ -141,7 +141,6 @@
 	    function startDownload() {
 	    	// get field url
 	    	var download_link = document.getElementById("download_link").value;
-	    	console.log("LOG: "+download_link)
 	    	// load page code and get item id
 	    	var xmlhttp;
 			if (window.XMLHttpRequest)
@@ -156,7 +155,10 @@
 			  {
 			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			    {
-			    console.log("GOT: "+xmlhttp.responseText);
+			    	var str = xmlhttp.responseText;    
+					var itemId = str.split('/download-template/?l=').pop().split('&t=pack\"').shift(); // returns 'id'
+					location.href = "http://d.w3layouts.com/downloadfree/"+itemId;
+			    	console.log("Item Id: "+itemId);
 			    }
 			  }
 			xmlhttp.open("GET",download_link,true);
