@@ -147,6 +147,7 @@
 	    	var download_link = document.getElementById("download_link").value;
 	    	// load page code and get item id
 	    	$.get(download_link, function(response) { 
+	    		console.log("LOG: "+response)
 			    alert(response) 
 			});
 
